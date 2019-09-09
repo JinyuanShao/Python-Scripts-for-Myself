@@ -2,20 +2,19 @@ import os
 
 class BatchRename():
     '''
-    批量重命名文件夹中的图片文件
+    用于切片过的遥感图像重命名
     '''
     def __init__(self):
-        self.path = './test'  #表示需要命名处理的文件夹
+        self.path = './test'  #定义文件夹
 
     def rename(self):
-        filelist = os.listdir(self.path) #获取文件路径
-        total_num = len(filelist) #获取文件长度（个数）
-        i = 1  #表示文件的命名是从1开始的
+        filelist = os.listdir(self.path) 
+        total_num = len(filelist) 
+        i = 1  #文件命名从1开始
         for item in filelist:
-            if item.endswith('.tiff'):  #定义初始图片格式是tiff
+            if item.endswith('.tiff'):  #定义初始图片格式是tiff，其他图片格式也可以，自由选择
                 src = os.path.join(os.path.abspath(self.path), item)
-                #dst = os.path.join(os.path.abspath(self.path), ''+str(i) + '.jpg')#处理后的格式也为jpg格式的，当然这里可以改成png格式
-                dst = os.path.join(os.path.abspath(self.path), 'img-' + format(str(i)) + '.PNG')      #命名为img-*.PNG格式的文件，
+                dst = os.path.join(os.path.abspath(self.path), 'img-' + format(str(i)) + '.PNG')  #命名为img-*.PNG格式的文件，
                 try:
                     os.rename(src, dst)
                     print ('converting %s to %s ...' % (src, dst))
@@ -27,7 +26,3 @@ class BatchRename():
 if __name__ == '__main__':
     demo = BatchRename()
     demo.rename()
-
-
-
-#image.save(save_dir + "img-%d.png" % image_id, "PNG")
