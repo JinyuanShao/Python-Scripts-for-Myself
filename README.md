@@ -1,4 +1,4 @@
-# Batch-rename-tiff2pnf
+# Batch-rename-tiff2png
 A simple Python Script which can batch convert tiff to png.
 
 ### Requirement：
