@@ -10,6 +10,6 @@ Using os and Pandas to cinvert file.
 
 ### Usage
 * Open txt2csv.py
-* Modify your own folder of txt file path at #operate_dir#
-* Modify your own folder of csv file path at #result_dir#
-* run command at anywhere <python txt2csv.py>
+* Modify your own folder of txt file path at # operate_dir #
+* Modify your own folder of csv file path at # result_dir #
+* run command at anywhere: 'python txt2csv.py'
